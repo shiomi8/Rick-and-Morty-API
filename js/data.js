@@ -15,8 +15,9 @@ const traer_datos = (id)=>{
 const pintar_datos = ()=>{
     contenedor.innerHTML = "";
     contenedor.insertAdjacentHTML('beforeend',`
-    <img src="${personajes.image}">
+    
     <div class="datos">
+        <img class="personaje" src="${personajes.image}">
         <h1>${personajes.name}</h1>
         <div>
           <div class="descripcion"> Status: ${personajes.status}</div>
@@ -28,7 +29,7 @@ const pintar_datos = ()=>{
     </div>
     `)
     contenedor.insertAdjacentHTML('beforeend', `
-      <button id="random">Generar Personaje</button>
+      <center><button id="random">Generar Personaje</button></center>
     `)
     let rand_btn = document.getElementById("random")
     rand_btn.addEventListener("click", ()=>{
